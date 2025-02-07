@@ -1,0 +1,51 @@
+# YAML formatted configuration file
+
+# Time in seconds between files presence checks
+sleep_duration: 2
+
+# Logging:
+# through syslog or into a dedicated file.
+# logging can be either "syslog" or "/path/to/logging.file" or "debug only"
+# logging: "syslog"
+# logging: "logs/FolderPrint.log"
+logging: "debug only"
+
+script_behavior:
+  debug: True
+  Production_mode: True
+
+path_to_libreoffice: "/usr/bin/libreoffice"
+
+folders:
+  # main: contains one directory per printer
+  # ex. with /srv as shared (through NFS, SMB of whatever) directory
+  # main: /srv/FolderPrint
+  main: "/path/to/printers"
+  # where users can put and get files
+  # all these folders will be created for each declared printer
+  users_folders:
+    # Per printer folders:
+    PDF_conversion:
+      01-input:           "001-Convert_to_PDF-and_print"
+      02-output:          "101-Printed_PDF_files"
+    Direct_print:
+      01-input:           "002-Direct_Print"
+      02-output:          "102-Printed_files"
+  # temporary directory names
+  # all these folders will be created for each declared printer
+  temp_folders:
+    main: "900-Temoprary_directories"
+    # Per printer folders:
+    PDF_conversion:
+      11-to_be_converted: "911-PDF_to_be_converted"
+      12-to_be_printed:   "912-PDF_converted"
+    Direct_print:
+      12-to_be_printed:   "922-Files_to_be_printed"
+
+
+
+
+
+
+
+

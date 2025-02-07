@@ -1,0 +1,15 @@
+This tools works with three files:
+- FolderPrint.py
+  That's the script itself. It needs:
+  - a configuration files
+  - a printer list
+  Both files name are given through command line arguments, so the naming is free.
+- FolderPrint.conf.yaml
+  An example of configuration file.
+  Change values as you see fit.
+  Change configuration item names at your own risk, that would imply changes in the code of course.
+- FolderPrint.printers
+  A file containing one and one printer name as declared in Cups Printing System
+
+Launch example:
+./FolderPrint.py --config_file FolderPrint.conf.yaml --printers_list_file FolderPrint.printers
