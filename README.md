@@ -11,3 +11,9 @@ It can also convert files into PDF before printing them.
   - pyyaml
   - pycups
   - argcomplete
+
+## Two printing modes are available
+### Direct Printing
+When a file is uploaded into a printing directory, it is printed.
+### Delayed Printing
+When a file is uploaded into a printing directory, the printing job is put on hold until the user unblock the job by connecting to a printer to ask for printing this job on that printer.
